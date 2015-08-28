@@ -19,6 +19,10 @@ module Methods2
 		end
 		
 	end
+	def sucessful_sqirrel_party?(kind_of_day, number_of_nuts)
+
+		
+	end
 	# TODO - write ice_cream_party?
 	
 	# TODO - write successful_squirrel_party?

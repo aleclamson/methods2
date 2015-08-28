@@ -33,4 +33,21 @@ class Methods2Test < MiniTest::Test
 		assert_equal 2, @m.ice_cream_party(30, 60)
 
 	end
+
+		def test_sucessful_sqirrel_party
+			assert_equal true, @m.sucessful_sqirrel_party?(weekday, 40)
+			assert_equal true, @m.sucessful_sqirrel_party?(weekday, 60)
+			assert_equal true, @m.sucessful_sqirrel_party?(weekday, 50)
+
+			assert_equal true, @m.sucessful_sqirrel_party?(!weekday, 40)
+			assert_equal true, @m.sucessful_sqirrel_party?(!weekday, 60)
+			assert_equal true, @m.sucessful_sqirrel_party?(!weekday, 50)
+			assert_equal true, @m.sucessful_sqirrel_party?(!weekday, 90)
+			
+			assert_equal false, @m.sucessful_sqirrel_party?(weekday, 20)
+			assert_equal false, @m.sucessful_sqirrel_party?(!weekday, 70)
+			assert_equal false, @m.sucessful_sqirrel_party?(!weekday, 30)
+			
+			
+		end
 end
