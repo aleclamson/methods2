@@ -1,6 +1,13 @@
 module Methods2
 	
-	# TODO - write elevenish?
+	def elevenish(num)
+		quotient, modulus = num.divmod(11)
+		if modulus == 0 || modulus == 1
+			true
+		else
+			false
+		end
+	end
 	
 	# TODO - write ice_cream_party?
 	
