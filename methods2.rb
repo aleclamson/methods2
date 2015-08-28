@@ -9,6 +9,16 @@ module Methods2
 		end
 	end
 	
+	def ice_cream_party(ice_cream, candy)
+		if ice_cream < 5 || candy < 5
+			0
+		elsif ice_cream >= candy*2 || candy >= ice_cream*2
+			2
+		elsif ice_cream >= 5 && candy >= 5
+			1
+		end
+		
+	end
 	# TODO - write ice_cream_party?
 	
 	# TODO - write successful_squirrel_party?
