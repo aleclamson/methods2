@@ -17,11 +17,16 @@ module Methods2
 		elsif ice_cream >= 5 && candy >= 5
 			1
 		end
-		
 	end
-	def sucessful_sqirrel_party?(kind_of_day, number_of_nuts)
 
-		
+	def sucessful_sqirrel_party?(weekday, number_of_nuts)
+		if weekday && number_of_nuts >= 40 && number_of_nuts <= 60
+			true
+		elsif !weekday && number_of_nuts >= 40 
+			true
+		else 
+			false
+		end
 	end
 	# TODO - write ice_cream_party?
 	

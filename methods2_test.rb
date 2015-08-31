@@ -35,18 +35,18 @@ class Methods2Test < MiniTest::Test
 	end
 
 		def test_sucessful_sqirrel_party
-			assert_equal true, @m.sucessful_sqirrel_party?(weekday, 40)
-			assert_equal true, @m.sucessful_sqirrel_party?(weekday, 60)
-			assert_equal true, @m.sucessful_sqirrel_party?(weekday, 50)
+			assert_equal true, @m.sucessful_sqirrel_party?(true, 40)
+			assert_equal true, @m.sucessful_sqirrel_party?(true, 60)
+			assert_equal true, @m.sucessful_sqirrel_party?(true, 50)
 
-			assert_equal true, @m.sucessful_sqirrel_party?(!weekday, 40)
-			assert_equal true, @m.sucessful_sqirrel_party?(!weekday, 60)
-			assert_equal true, @m.sucessful_sqirrel_party?(!weekday, 50)
-			assert_equal true, @m.sucessful_sqirrel_party?(!weekday, 90)
+			assert_equal true, @m.sucessful_sqirrel_party?(false, 40)
+			assert_equal true, @m.sucessful_sqirrel_party?(false, 60)
+			assert_equal true, @m.sucessful_sqirrel_party?(false, 50)
+			assert_equal true, @m.sucessful_sqirrel_party?(false, 90)
 			
-			assert_equal false, @m.sucessful_sqirrel_party?(weekday, 20)
-			assert_equal false, @m.sucessful_sqirrel_party?(!weekday, 70)
-			assert_equal false, @m.sucessful_sqirrel_party?(!weekday, 30)
+			assert_equal false, @m.sucessful_sqirrel_party?(true, 20)
+			assert_equal false, @m.sucessful_sqirrel_party?(true, 70)
+			assert_equal false, @m.sucessful_sqirrel_party?(false, 30)
 			
 			
 		end
