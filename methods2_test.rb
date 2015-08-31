@@ -50,4 +50,15 @@ class Methods2Test < MiniTest::Test
 			
 			
 		end
+
+	def test_ticket
+		assert_equal 10, @m.ticket(1, 9, 19)
+		assert_equal 10, @m.ticket(3, 1, 7)
+		assert_equal 10, @m.ticket(3, 5, 5)
+
+		assert_equal 5, @m.ticket(13, 5, 3)
+		assert_equal 5, @m.ticket(4, 11, 1)
+
+		assert_equal 0, @m.ticket(4, 1, 1)
+	end
 end

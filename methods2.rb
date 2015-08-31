@@ -28,6 +28,18 @@ module Methods2
 			false
 		end
 	end
+
+
+	def ticket(a, b, c)
+		if a + b == 10 || a + c == 10 || b + c== 10
+			10
+		elsif a + b - 10 == b + c || a + b - 10 == a + c
+			5	
+		else
+			0
+		end
+	end
+	
 	# TODO - write ice_cream_party?
 	
 	# TODO - write successful_squirrel_party?
