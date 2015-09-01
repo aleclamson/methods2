@@ -39,14 +39,16 @@ module Methods2
 			0
 		end
 	end
-	
-	# TODO - write ice_cream_party?
-	
-	# TODO - write successful_squirrel_party?
-	
-	# TODO - write ticket
 
-	# TODO - write in_order?
+	def in_order?(a, b, c, bOk)
+		if b > a &&  c > b && !bOk
+			true
+		elsif c > b && bOk
+			true
+		else
+			false
+		end
+	end
 
 	# TODO - write less_by_ten?
 	

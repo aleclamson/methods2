@@ -34,22 +34,20 @@ class Methods2Test < MiniTest::Test
 
 	end
 
-		def test_sucessful_sqirrel_party
-			assert_equal true, @m.sucessful_sqirrel_party?(true, 40)
-			assert_equal true, @m.sucessful_sqirrel_party?(true, 60)
-			assert_equal true, @m.sucessful_sqirrel_party?(true, 50)
+	def test_sucessful_sqirrel_party
+		assert_equal true, @m.sucessful_sqirrel_party?(true, 40)
+		assert_equal true, @m.sucessful_sqirrel_party?(true, 60)
+		assert_equal true, @m.sucessful_sqirrel_party?(true, 50)
 
-			assert_equal true, @m.sucessful_sqirrel_party?(false, 40)
-			assert_equal true, @m.sucessful_sqirrel_party?(false, 60)
-			assert_equal true, @m.sucessful_sqirrel_party?(false, 50)
-			assert_equal true, @m.sucessful_sqirrel_party?(false, 90)
+		assert_equal true, @m.sucessful_sqirrel_party?(false, 40)
+		assert_equal true, @m.sucessful_sqirrel_party?(false, 60)
+		assert_equal true, @m.sucessful_sqirrel_party?(false, 50)
+		assert_equal true, @m.sucessful_sqirrel_party?(false, 90)
 			
-			assert_equal false, @m.sucessful_sqirrel_party?(true, 20)
-			assert_equal false, @m.sucessful_sqirrel_party?(true, 70)
-			assert_equal false, @m.sucessful_sqirrel_party?(false, 30)
-			
-			
-		end
+		assert_equal false, @m.sucessful_sqirrel_party?(true, 20)
+		assert_equal false, @m.sucessful_sqirrel_party?(true, 70)
+		assert_equal false, @m.sucessful_sqirrel_party?(false, 30)	
+	end
 
 	def test_ticket
 		assert_equal 10, @m.ticket(1, 9, 19)
@@ -61,4 +59,15 @@ class Methods2Test < MiniTest::Test
 
 		assert_equal 0, @m.ticket(4, 1, 1)
 	end
+
+	def test_in_order
+	 	assert_equal true, @m.in_order?(1, 2, 7, true)
+	 	assert_equal true, @m.in_order?(1, 2, 7, false)
+	 	assert_equal true, @m.in_order?(6, 1, 7, true)
+
+	 	assert_equal false, @m.in_order?(6, 8, 2, false)
+	 	assert_equal false, @m.in_order?(7, 5, 1, false)
+		
+	 end
+
 end
