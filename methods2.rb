@@ -48,6 +48,11 @@ module Methods2
 		else
 			false
 		end
+
+		def less_by_ten
+			
+			
+		end
 	end
 
 	# TODO - write less_by_ten?

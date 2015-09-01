@@ -70,4 +70,16 @@ class Methods2Test < MiniTest::Test
 		
 	 end
 
+	 def test_less_by_ten
+	 		assert_equal true, @m.less_by_ten?(1, 1, 2)
+	 		assert_equal true, @m.less_by_ten?(14, 11, 20)
+	 		assert_equal true, @m.less_by_ten?(10, 11, 20)
+	 		
+	 		assert_equal false, @m.less_by_ten?(1, 1, 2)
+	 		assert_equal true, @m.less_by_ten?(14, 11, 20)
+	 		assert_equal true, @m.less_by_ten?(18, 15, 23)
+
+
+	 end
+
 end
